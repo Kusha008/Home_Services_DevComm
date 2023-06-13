@@ -2,6 +2,7 @@ import 'package:banner_carousel/banner_carousel.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:task/HomePage/Notification.dart';
 
 class homepage extends StatefulWidget {
   //const searchbar({super.key});
@@ -75,7 +76,9 @@ class _homepageState extends State<homepage> {
             Padding(
                 padding: EdgeInsets.only(right: 10.0),
                 child: IconButton(
-                    onPressed: () {}, icon: Icon(Icons.notifications))
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => notification()));
+                    }, icon: Icon(Icons.notifications))
 
                 ),
           ],
